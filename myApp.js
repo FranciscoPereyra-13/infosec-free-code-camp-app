@@ -8,8 +8,8 @@ app.use(helmet.hidePoweredBy());
 //Actividad 3 de 14:
 app.use(helmet.frameguard({action: 'deny'}));
 
-
-
+//Actividad 4 de 14:
+app.use(helmet.xssFilter());
 
 
 
