@@ -17,8 +17,9 @@ app.use(helmet.noSniff());
 //Actividad 6 de 14:
 app.use(helmet.ieNoOpen());
 
-
-
+//Actividad 7 de 14:
+const timeInSeconds = 90*24*60*60;
+app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 
 
 
