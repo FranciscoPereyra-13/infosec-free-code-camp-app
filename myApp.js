@@ -28,7 +28,14 @@ app.use(helmet.dnsPrefetchControl());
 app.use(helmet.noCache());
 
 //Actividad 10 de 14:
-
+app.use(
+  helmet.contentSecurityPolicy({directives: 
+    {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", 'trusted-cdn.com'],
+    }
+  })
+);
 
 //Actividad 11 de 14:
 
