@@ -25,7 +25,7 @@ app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 app.use(helmet.dnsPrefetchControl());
 
 //Actividad 9 de 14:
-
+app.use(helmet.noCache());
 
 //Actividad 10 de 14:
 
