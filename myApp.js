@@ -21,33 +21,25 @@ app.use(helmet.ieNoOpen());
 const timeInSeconds = 90*24*60*60;
 app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 
+//Actividad 8 de 14:
+app.use(helmet.dnsPrefetchControl());
+
+//Actividad 9 de 14:
 
 
+//Actividad 10 de 14:
 
 
+//Actividad 11 de 14:
 
 
+//Actividad 12 de 14:
 
 
+//Actividad 13 de 14:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Actividad 14 de 14:
 
 
 
