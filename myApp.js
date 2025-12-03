@@ -11,7 +11,8 @@ app.use(helmet.frameguard({action: 'deny'}));
 //Actividad 4 de 14:
 app.use(helmet.xssFilter());
 
-
+//Actividad 5 de 14:
+app.use(helmet.noSniff());
 
 
 
