@@ -14,8 +14,8 @@ app.use(helmet.xssFilter());
 //Actividad 5 de 14:
 app.use(helmet.noSniff());
 
-
-
+//Actividad 6 de 14:
+app.use(helmet.ieNoOpen());
 
 
 
