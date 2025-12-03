@@ -2,43 +2,54 @@ const express = require('express');
 const helmet = require('helmet');
 const app = express();
 
-//Actividad 2 de 14:
-app.use(helmet.hidePoweredBy());
+// //Actividad 2 de 14:
+// app.use(helmet.hidePoweredBy());
 
-//Actividad 3 de 14:
-app.use(helmet.frameguard({action: 'deny'}));
+// //Actividad 3 de 14:
+// app.use(helmet.frameguard({action: 'deny'}));
 
-//Actividad 4 de 14:
-app.use(helmet.xssFilter());
+// //Actividad 4 de 14:
+// app.use(helmet.xssFilter());
 
-//Actividad 5 de 14:
-app.use(helmet.noSniff());
+// //Actividad 5 de 14:
+// app.use(helmet.noSniff());
 
-//Actividad 6 de 14:
-app.use(helmet.ieNoOpen());
+// //Actividad 6 de 14:
+// app.use(helmet.ieNoOpen());
 
-//Actividad 7 de 14:
-const timeInSeconds = 90*24*60*60;
-app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
+// //Actividad 7 de 14:
+// const timeInSeconds = 90*24*60*60;
+// app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 
-//Actividad 8 de 14:
-app.use(helmet.dnsPrefetchControl());
+// //Actividad 8 de 14:
+// app.use(helmet.dnsPrefetchControl());
 
-//Actividad 9 de 14:
-app.use(helmet.noCache());
+// //Actividad 9 de 14:
+// app.use(helmet.noCache());
 
-//Actividad 10 de 14:
-app.use(
-  helmet.contentSecurityPolicy({directives: 
-    {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", 'trusted-cdn.com'],
-    }
-  })
-);
+// //Actividad 10 de 14:
+// app.use(
+//   helmet.contentSecurityPolicy({directives: 
+//     {
+//       defaultSrc: ["'self'"],
+//       scriptSrc: ["'self'", 'trusted-cdn.com'],
+//     }
+//   })
+// );
 
 //Actividad 11 de 14:
+app.use(helmet(
+  {
+    contentSecurityPolicy: 
+    {
+      directives: 
+      { defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", 'trusted-cdn.com'],
+      }
+    },
 
+    noCache: true
+  }))
 
 //Actividad 12 de 14:
 
